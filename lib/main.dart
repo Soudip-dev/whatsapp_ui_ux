@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:whats_app_ui_ux/pages/updates_page/updates_page.dart';
+import 'package:whats_app_ui_ux/pages/calls_page/calls_page.dart';
+
+
 
 
 void main() {
@@ -16,11 +18,11 @@ class MyApp extends StatelessWidget {
     return 
     // MaterialApp.router(routerConfig: PagesRoute().pageroute,);
      MaterialApp(
-      home: UpdatesPage(),
+      home: CallsPage(),
       title: 'Flutter Demo',
       // theme: ThemeData( colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       // ),
-      // routerConfig: PagesRoute().pageroute,
+      
     );
   }
 }

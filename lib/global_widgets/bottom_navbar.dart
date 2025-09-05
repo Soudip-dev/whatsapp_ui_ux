@@ -112,8 +112,8 @@ class BottomNavigationbarWidget {
         children: [
         
         Container(
-          height: 30,
-          width: 45,
+          height: 28,
+          width: 50,
           decoration: BoxDecoration(
             
             color:btnColor,

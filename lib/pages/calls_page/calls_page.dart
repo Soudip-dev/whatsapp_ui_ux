@@ -17,7 +17,19 @@ class _CallsPageState extends State<CallsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget.getAppBar(title: "Calls",actions: [CallAppBerActionBtn()]),
-       bottomNavigationBar: BottomNavigationbarWidget.bottomNavigationBar(context, btInfo: "Calls")
+       bottomNavigationBar: BottomNavigationbarWidget.bottomNavigationBar(context, btInfo: "Calls"),
+       body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        color: Colors.grey,
+        padding: EdgeInsets.symmetric(horizontal: 15),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+          Text("Favorites"),
+
+        ],),
+       )
     );
   }
 }

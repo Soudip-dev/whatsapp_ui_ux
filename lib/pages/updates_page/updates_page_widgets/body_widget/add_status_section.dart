@@ -11,12 +11,13 @@ Row(children: [
   Stack(children: [
   
     CircleAvatar(radius: 30,
+    backgroundColor: Colors.white,
     child: CircleAvatar(radius: 22,backgroundColor: Colors.red,),
     ),
     Positioned(child: CircleAvatar(radius: 10,backgroundColor: Colors.green,
     
     child: Icon(Icons.add,color: Colors.white,size: 15,),
-    ),bottom:10 ,right: 5,)
+    ),bottom:10 ,right: 2,)
   ],),
   AppSpace.horSpacer(15),
   Column(
@@ -28,6 +29,7 @@ Row(children: [
     Text("Disappears after 24 hours")
   ],)
   ],)
+
 ;
   }
 }
