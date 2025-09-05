@@ -72,7 +72,7 @@ class CallLogWidget extends StatelessWidget {
               ],),
             ),
             // Spacer(),
-      Icon( callVideoIcon,color: Colors.white,size: 30,)
+      Icon( callVideoIcon,color: Colors.black,size: 22,)
           ],),
     );
   }
