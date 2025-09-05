@@ -5,6 +5,7 @@ import 'package:whats_app_ui_ux/pages/updates_page/updates_page_widgets/body_wid
 import 'package:whats_app_ui_ux/pages/updates_page/updates_page_widgets/body_widget/explore_more_widget.dart';
 import 'package:whats_app_ui_ux/pages/updates_page/updates_page_widgets/body_widget/follow_containt_widget.dart';
 import 'package:whats_app_ui_ux/pages/updates_page/updates_page_widgets/body_widget/recent_update.dart';
+import 'package:whats_app_ui_ux/pages/updates_page/updates_page_widgets/update_floating_btn.dart';
 
 import 'package:whats_app_ui_ux/pages/updates_page/updates_page_widgets/updates_app_ber_action_btn.dart';
 import 'package:whats_app_ui_ux/utils/app_space.dart';
@@ -27,6 +28,8 @@ class _UpdatesPageState extends State<UpdatesPage> {
         title: "Updates",
         actions: [UpdatesAppBerActionBtn()]
         ),
+        
+        floatingActionButton: UpdateFloatingBtn(),
          bottomNavigationBar: BottomNavigationbarWidget.bottomNavigationBar(context,btInfo: "Updates"),
          body: Container(
           height: double.infinity,

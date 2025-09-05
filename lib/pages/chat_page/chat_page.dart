@@ -19,7 +19,10 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBarWidget.getAppBar(  title: "WhatsApp",actions: [ChatAppBerActionBtn()]),
-
+     floatingActionButton: FloatingActionButton(onPressed: (){},
+     backgroundColor: Colors.green,
+     
+     child: Icon(Icons.add_comment_outlined,color: Colors.black,),),
      bottomNavigationBar: BottomNavigationbarWidget.bottomNavigationBar(context, btInfo: "")
     
    
