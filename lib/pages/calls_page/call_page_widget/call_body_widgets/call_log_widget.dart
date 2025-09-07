@@ -2,42 +2,37 @@ import 'package:flutter/material.dart';
 import 'package:whats_app_ui_ux/utils/app_space.dart';
 
 class CallLogWidget extends StatelessWidget {
-  const CallLogWidget({super.key});
+  final String name;
+  final String callType;
+  final String time;
+  final bool isVideoCall;
+  final String profilePic;
+  
+  const CallLogWidget({
+    super.key,
+    required this.name,
+    required this.callType,
+    required this.time,
+    required this.isVideoCall,
+    required this.profilePic
+    });
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         call_log_widge(
-          name: "Sandip",
-          nameFontColor: Colors.black,
-          status: "~sandip_samanta",
-          callVideoIcon: Icons.call ,
-          icon: Icons.arrow_outward_sharp,
-          iconColor: Colors.green ,
-          time: "August 28, 6.23 PM",
+          name: name,
+          nameFontColor: callType == "Outgoing" ? Colors.black: Colors.red,
+          status: "~$name",
+          callVideoIcon: isVideoCall ? Icons.videocam : Icons.call ,
+          icon:callType == "Outgoing" ? Icons.arrow_outward_sharp : Icons.arrow_downward_sharp,
+          iconColor: callType == "Outgoing" ? Colors.green : Colors.red ,
+          time: time,
+          profilePic: profilePic,
 
           ),
-          call_log_widge(
-          name: "Maa",
-          nameFontColor: Colors.black,
-          status: "",
-          callVideoIcon: Icons.videocam_outlined ,
-          icon: Icons.arrow_outward_sharp,
-          iconColor: Colors.green ,
-          time: "September 08, 8.48 PM",
-
-          ),
-          call_log_widge(
-          name: "Chiku",
-          nameFontColor: Colors.red,
-          status: "~yoo_bro",
-          callVideoIcon: Icons.call  ,
-          icon: Icons.subdirectory_arrow_left_sharp,
-          iconColor: Colors.red ,
-          time: "September 08, 8.48 PM",
-
-          ),
+          
       ],
     );
   }
@@ -50,12 +45,15 @@ class CallLogWidget extends StatelessWidget {
     required IconData icon,
     required IconData callVideoIcon,
     required Color iconColor,
+    required String profilePic,
 
     }) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 15),
       child: Row(children: [
-            CircleAvatar(radius: 30,backgroundColor: Colors.amber),
+            CircleAvatar(radius: 30,backgroundColor: Colors.amber
+            
+            ,backgroundImage: AssetImage(profilePic),),
             AppSpace.horSpacer(10),
             Expanded(
               child: Column(
@@ -72,7 +70,7 @@ class CallLogWidget extends StatelessWidget {
               ],),
             ),
             // Spacer(),
-      Icon( callVideoIcon,color: Colors.black,size: 22,)
+      Icon( callVideoIcon,color: Colors.black,size: 25,)
           ],),
     );
   }

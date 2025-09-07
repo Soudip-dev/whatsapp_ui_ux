@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:whats_app_ui_ux/utils/app_space.dart';
 
 class FollowContaintWidget extends StatelessWidget {
-  const FollowContaintWidget({super.key});
+  final String name;
+  final String time;
+  final String img;
+  const FollowContaintWidget({super.key,required this.name,required this.time,required this.img});
 
   @override
   Widget build(BuildContext context) {
@@ -14,16 +17,16 @@ class FollowContaintWidget extends StatelessWidget {
     return Container(height: 65,width: double.infinity,
     // color: Colors.white,
       child: Row(children: [
-        CircleAvatar(radius: 25,),
+        CircleAvatar(radius: 25,backgroundImage: AssetImage(img),),
         AppSpace.horSpacer(),
         Expanded(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-            Text("Sandip",style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15),),
+            Text(name,style: TextStyle(fontWeight: FontWeight.w500,fontSize: 15),),
             
-            Text("1:46 PM")
+            Text(time)
           ],),
         ),
         // Spacer(),
